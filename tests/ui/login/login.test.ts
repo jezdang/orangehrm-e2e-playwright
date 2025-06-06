@@ -12,7 +12,7 @@ test.describe('Login Tests', () => {
     throw new Error('Positive login test scenario not found');
   }
   
-  test('should successfully login with valid credentials', { tag: '@positive' },
+  test(`${validScenario.caseId} - ${validScenario.testCaseName}`, { tag: '@positive' },
     async ({ page }) => {
       const loginPage = new LoginPage(page);
       await test.step('Opening login page', async () => {
@@ -25,7 +25,7 @@ test.describe('Login Tests', () => {
           await expect(page.locator('h6')).toHaveText('Dashboard');
       });
     });
-  });
+ 
 
   // Negative login test scenarios
   for (const scenario of loginTestScenarios) {
@@ -54,6 +54,7 @@ test.describe('Login Tests', () => {
       });
     }
   };
+ });
 
   test.afterEach(async ({ page }) => {
       try {

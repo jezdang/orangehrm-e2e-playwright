@@ -1,7 +1,7 @@
 export const loginTestScenarios = [
   // Valid credentials
   {
-    caseId: 'TC-000',
+    caseId: 'TC-001',
     testCaseName: 'Login with valid credentials',
     tag: '@positive',
     username: 'Admin',
@@ -14,7 +14,7 @@ export const loginTestScenarios = [
 
   // Negative test scenarios
   {
-    caseId: 'TC-001',
+    caseId: 'TC-002',
     testCaseName: 'Login with whitespace password',
     tag: '@negative',
     username: 'Admin',
@@ -25,7 +25,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-002',
+    caseId: 'TC-003',
     testCaseName: 'Login with long password',
     tag: '@negative',
     username: 'Admin',
@@ -36,7 +36,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-003',
+    caseId: 'TC-004',
     testCaseName: 'Login with empty username',
     tag: '@negative',
     username: '',
@@ -47,7 +47,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-004',
+    caseId: 'TC-005',
     testCaseName: 'Login with empty password',
     tag: '@negative',
     username: 'Admin',
@@ -58,7 +58,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-005',
+    caseId: 'TC-006',
     testCaseName: 'Login with special characters',
     tag: '@negative',
     username: 'Admin@#$',
@@ -69,7 +69,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-006',
+    caseId: 'TC-007',
     testCaseName: 'Login with incorrect password',
     tag: '@negative',
     username: 'Admin',
@@ -80,7 +80,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-007',
+    caseId: 'TC-008',
     testCaseName: 'Login with incorrect username',
     tag: '@negative',
     username: 'wronguser',
@@ -91,7 +91,7 @@ export const loginTestScenarios = [
     }
   },
   {
-    caseId: 'TC-008',
+    caseId: 'TC-009',
     testCaseName: 'Login with whitespace username',
     tag: '@negative',
     username: ' ',
