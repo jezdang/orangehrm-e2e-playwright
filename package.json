@@ -1,0 +1,36 @@
+{
+  "name": "orangehrm-e2e-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --config config/playwright.config.ts --project=chromium && npx allure generate ./allure-results --clean -o allure-report && npx allure open allure-report",
+    "test:crossBrowser": "playwright test --config config/playwright.config.ts && npx allure generate ./allure-results --clean -o allure-report && npx allure open allure-report",
+    "test:headed": "playwright test --headed --config config/playwright.config.ts && npx allure generate ./allure-results --clean -o allure-report && npx allure open allure-report",
+    "test:report": "playwright show-report",
+    "test:ci": "playwright test --workers 2 --reporter html --config config/playwright.config.ts",
+    "cleanup": "rm -rf allure-results allure-report test-results",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Playwright E2E Test Framework for OrangeHRM",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^20.8.0",
+    "allure-commandline": "^2.34.0",
+    "allure-playwright": "^3.2.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.50.0",
+    "playwright-ctrf-json-reporter": "^0.0.20",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
